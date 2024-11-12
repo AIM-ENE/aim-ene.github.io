@@ -5,97 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Engineering S1: Project Construction aNd Production</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 10px;
-            padding: 20px 10px;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1em;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #333;
-        }
-        a:hover, a:active {
-            color: #666;
-            text-decoration: underline;
-        }
-        #bean {
-            position: absolute;
-            font-size: 32px;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform: rotate(0deg);
-            transition: transform 0.1s ease;
-            pointer-events: none; /* Zorgt dat het de muisklikken niet blokkeert */
-        }
-        main {
-            display: flex;
-            gap: 20px; /* Ruimte tussen hoofdinhoud en aside */
-        }
-        section {
-            flex: 1; /* Neemt de resterende ruimte in binnen main */
-        }
-        aside {
-            width: 500px; /* Vaste breedte voor aside */
-            font-size: 0.9em;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        aside pre {
-            font-size: 0.85em;
-            max-height: 200px; /* Beperkte hoogte voor codeblok */
-            overflow-y: auto;
-            background-color: #f0f0f0;
-            padding: 8px;
-            border-radius: 4px;
-            white-space: pre-wrap; /* Zet tekst wrapping aan */
-            word-wrap: break-word; /* Zorgt ervoor dat lange woorden afbreken als nodig */
-        }
-        details summary {
-            display: inline-flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        details summary::after {
-            content: "▸"; /* Zorgt voor een rechts gerichte caret als standaard */
-            margin-left: 8px; /* Voeg ruimte toe tussen "Code" en de caret */
-            font-size: 1em;
-            transition: transform 0.2s ease; /* Smooth transition */
-        }
-        details[open] summary::after {
-            transform: rotate(90deg); /* Draaien naar beneden als geopend */
-        }
-        blockquote {
-            font-style: italic;
-            font-size: 1.1em;
-            color: #555;
-            background-color: #f9f9f9;
-            padding: 15px 20px;
-            border-left: 4px solid #ccc;
-            margin: 10px 0;
-        }
+
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>    
+    <script src="app.js" defer></script>    
 </head>
 <body>
     <header>
@@ -129,10 +45,10 @@
             <br/>
             <details>
                 <summary><h2>Code</h2></summary>
+                // Deze comments wijken af van de — wat uitgebreidere - echte <a href="https://github.com/AIM-CNP/aim-cnp.github.io/blob/main/app.js">code</a>.
+                // Daarin zit de <a href="https://dev.to/m__mdy__m/polymorphism-in-javascript-3l84">polymorfisme</a> en <a href="https://en.wikipedia.org/wiki/Strategy_pattern">Strategy</a> pattern in zit. Maar dit geeft een idee hoe een element te laten bewegen.
                 <pre><code class="language-javascript">
-    // Voorbeeldcode voor een dansend boontje dat de muis volgt.
-    // Deze comments wijken af van de wat langere actuele code
-    // in de bron waar polymorfisme en Strategy pattern in zit.
+// Voorbeeldcode voor een dansend boontje dat de muis volgt.
 document.addEventListener('mousemove', function(e) {
     const bean = document.getElementById('bean');
     ...
@@ -152,98 +68,6 @@ document.addEventListener('mousemove', function(e) {
             </details>
         </aside>
     </main>
-    <footer>&copy; 2024 AIM / HAN - Hogeschool Arnhem Nijmegen</footer>
-    <script>
-    class NoEffect {
-        move(bean, targetX, targetY) {
-            bean.style.left = targetX + 'px';
-            bean.style.top = targetY + 'px';
-        }
-    }
-
-    class LeafEffect {
-        constructor() {
-            this.beanX = 0;
-            this.beanY = 0;
-            this.hop = 0;
-            this.rotation = 0;
-            setInterval(() => {
-                this.hop = Math.random() * 20 - 10; // Update de hop minder vaak
-            }, 500);
-        }
-
-        move(bean, targetX, targetY) {
-            // Bereken de nieuwe posities met een lichte vertraging (0.1)
-            this.beanX += (targetX - this.beanX) * 0.1;
-            this.beanY += (targetY - this.beanY) * 0.1;
-
-            // Voeg een sinusfunctie toe voor wiegende rotatie en zijwaartse beweging
-            const wiggle = Math.sin(Date.now() / 200) * 15; // Rotatie heen en weer
-            this.rotation = Math.sin(Date.now() / 300) * 15; // Zacht draaien
-
-            // Toepassen van wiegende beweging en rotatie op het blaadje
-            bean.style.left = (this.beanX + wiggle) + 'px';
-            bean.style.top = (this.beanY + this.hop) + 'px';
-            bean.style.transform = `translate(-50%, -50%) rotate(${this.rotation}deg)`;
-        }
-    }
-
-    class BeanEffect {
-        constructor() {
-            this.beanX = 0;
-            this.beanY = 0;
-            this.jumpHeight = 0;
-        }
-
-        move(bean, targetX, targetY) {
-            this.beanX += (targetX - this.beanX) * 0.1;
-            this.beanY += (targetY - this.beanY) * 0.1;
-            this.jumpHeight = Math.abs(Math.sin(Date.now() / 300) * 15); // springende beweging
-            bean.style.left = this.beanX + 'px';
-            bean.style.top = (this.beanY - this.jumpHeight) + 'px';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const bean = document.getElementById('bean');
-        let targetX = 0, targetY = 0;
-        let strategy = new NoEffect();
-
-        // Muispositie bijwerken
-        document.addEventListener('mousemove', (e) => {
-            targetX = e.pageX; // Gebruik pageX in plaats van clientX
-            targetY = e.pageY; // Gebruik pageY in plaats van clientY
-        });
-
-        // Animatie op basis van de geselecteerde strategie
-        function animateBean() {
-            strategy.move(bean, targetX, targetY);
-            requestAnimationFrame(animateBean);
-        }
-
-        // Strategie bijwerken bij selectie van radio button
-        document.querySelectorAll('input[name="bean-mode"]').forEach((radio) => {
-            radio.addEventListener('change', (e) => {
-                const mode = e.target.value;
-                if (mode === 'none') {
-                    bean.textContent = '';
-                    strategy = new NoEffect();
-                }
-                if (mode === 'leaf') {
-                    strategy = new LeafEffect();
-                    bean.textContent = '🍃';
-                }
-                if (mode === 'bean') {
-                    strategy = new BeanEffect();
-                    bean.textContent = '🫘'; // Bruine boon emoji
-                }
-            });
-        });
-
-        // Start de animatie
-        animateBean();
-    });
-</script>
-    
+    <footer>&copy; 2024 AIM / HAN - Hogeschool Arnhem Nijmegen</footer>    
 </body>
 </html>
