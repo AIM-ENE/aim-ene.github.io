@@ -13,6 +13,7 @@ class NoEffect extends Effect {
 
 class LeafEffect extends Effect {
     constructor() {
+        super();
         this.beanX = 0;
         this.beanY = 0;
         this.hop = 0;
@@ -40,6 +41,7 @@ class LeafEffect extends Effect {
 
 class BeanEffect extends Effect  {
     constructor() {
+        super(); 
         this.beanX = 0;
         this.beanY = 0;
         this.jumpHeight = 0;
