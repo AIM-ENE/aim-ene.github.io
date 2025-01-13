@@ -3,68 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Engineering S1: Project Construction aNd Production</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>    
-    <script src="app.js" defer></script>    
+    <title>Software Engineering S2: Exploration and Elaboration</title>
 </head>
 <body>
     <header>
-        <h1>Semester 1: Construction aNd Production</h1>
+        <h1>Semester 2: Exploration and Elaboration</h1>
     </header>
     <main>
         <section>
-            <p>Welkom op pagina's van CNP, het 1e semester van het Profiel Software Engineering (SE) van HAN Academie voor ICT en Media (AIM)!</p>
+            <p>Welkom op pagina's van ENE, het 2e semester van het Profiel Software Engineering (SE) van HAN Academie voor ICT en Media (AIM)!</p>
             <p>Hier nog geen fancy artwork. Klik daarvoor - en voor informatie naar de course of project websites:</p>
             <ul>
-                <li><a href="/bewd">BEWD</a> - Backend Web Development</li>
-                <li><a href="/fewd">FEWD</a> - Front-end Web Development</li>
-                <li><a href="/fswd">FSWD</a> - Full Stack Web Development</li>
-                <li><a href="/pwac">PWAC</a> - Project Web Application Construction</li>
+                <li><a href="/doex">DOEX</a> - Domain Exploration (<a href="https://isas.han.nl/Default.aspx?F=OnderwijsAanbodDetails&Studiejaar=2024&Eigenaar=AIM&OWE=DOMEXP01&Back=A&dt=141744320">iSAS: DOMEXP01)</a>)</li>
+                <li><a href="/teex">TEEX</a> - Technology Exploration (<a href="https://isas.han.nl/Default.aspx?F=OnderwijsAanbodDetails&Studiejaar=2024&Eigenaar=AIM&OWE=TECEXP01&Back=A&dt=142041410">iSAS: TEXEXP01</a>)</li>
+                <li><a href="/soex">SOEX</a> - Solution Exploration (<a href="https://isas.han.nl/Default.aspx?F=OnderwijsAanbodDetails&Studiejaar=2024&Eigenaar=AIM&OWE=SOLEXP01&Back=A&dt=141954693">iSAS: SOLEXP01</a>)</li>
+                <li><a href="/pexe">PEXE</a> - Project Exploration and Elaboration <a href="https://isas.han.nl/Default.aspx?F=OnderwijsAanbodDetails&Studiejaar=2024&Eigenaar=AIM&OWE=PROEXP01&Back=A&dt=142312947">iSAS: PROEXP01</a>)</li>
             </ul>
         </section>
-        <aside>
-            <h2>Is dat alles? (&lt;aside&gt;)</h2>
-            <p>Dit is een 'doorlink pagina'. En trouwens ook een 'mooi' voorbeeld hoe een pagina zonder veel CSS of UI component framework eruit ziet ;).</p>
-            <blockquote>
-                “De verbeelding is belangrijker dan kennis.” - Albert Einstein (1879-1955)
-            </blockquote>
-            <p>We gebruiken hier dus geen CSS-framework, maar hieronder wel een stukje (Vanilla) JavaScript om een dansend boontje te krijgen dat je muis volgt<sup>*</sup>!</p>
-            <p><sup>*</sup>Of andere gedragingen: selecteer deze via onderstaan radio button. Volgens Strategy pattern en polymorphisme geimplementeerde, zoals je leerde bij OOPD in Java, maar dat kan ook gewon in JavaScript op de front-end ;).</p>
-            <div>
-                <label><input type="radio" name="bean-mode" value="none" checked> Geen effect</label><br/>
-                <label><input type="radio" name="bean-mode" value="leaf"> Dwarrelend blaadje</label><br/>
-                <label><input type="radio" name="bean-mode" value="bean"> Springende boon</label><br/>
-            </div>
-            <div id="bean"></div>
-            <br/>
-            <details>
-                <summary><h2>Code</h2></summary>
-                // Deze comments wijken af van de — wat uitgebreidere - echte <a href="https://github.com/AIM-CNP/aim-cnp.github.io/blob/main/app.js">code (zie GitHub)</a>.
-                // Daarin zit de <a href="https://dev.to/m__mdy__m/polymorphism-in-javascript-3l84">polymorfisme</a> en <a href="https://en.wikipedia.org/wiki/Strategy_pattern">Strategy</a> pattern in zit. Maar dit geeft een idee hoe een element te laten bewegen.
-                <pre><code class="language-javascript">
-// Voorbeeldcode voor een dansend boontje dat de muis volgt.
-document.addEventListener('mousemove', function(e) {
-    const bean = document.getElementById('bean');
-    ...
-    // Muispositie bijwerken
-    targetX = e.pageX;
-    targetY = e.pageY;
-                    
-    // Verplaats het boontje naar de muispositie
-    bean.style.left = mouseX + 'px';
-    bean.style.top = mouseY + 'px';
-
-    // Laat het boontje draaien voor een speels effect
-    const rotation = (mouseX + mouseY) % 360; // Geef een draai die afhangt van muispositie
-    bean.style.transform = `rotate(${rotation}deg)`;
-});
-                </code></pre>
-            </details>
-        </aside>
     </main>
-    <footer>&copy; 2024 AIM / HAN - Hogeschool Arnhem Nijmegen</footer>    
+    <footer>&copy; 2025+ AIM / HAN - Hogeschool Arnhem Nijmegen</footer>    
 </body>
 </html>
