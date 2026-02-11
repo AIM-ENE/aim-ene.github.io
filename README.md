@@ -6,3 +6,5 @@ Deze repo is er om 1 centrale startpagina te hebben. Ook voor de ['URL hackers']
 Zo krijgen ze nette pagina met links in plaats van een 404.
 
 Verder zit hier ook een `robots.txt` in, zodat de website - voorlopig - nog niet geindexeerd/gecrawld wordt door de Google Bot en andere crawlers.
+
+![pexe plaatje](pexe-logo.png)
