@@ -45,6 +45,14 @@ main {
 section {
     flex: 1; /* Neemt de resterende ruimte in binnen main */
 }
+.hero-image {
+    display: block;
+    max-width: 100%;
+    width: min(480px, 100%);
+    height: auto;
+    margin: 12px 0 20px;
+    border-radius: 8px;
+}
 aside {
     width: 500px; /* Vaste breedte voor aside */
     font-size: 0.9em;
