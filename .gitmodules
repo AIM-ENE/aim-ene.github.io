@@ -1,0 +1,12 @@
+[submodule "courses/doex"]
+	path = courses/doex
+	url = https://github.com/AIM-ENE/doex
+[submodule "courses/teex"]
+	path = courses/teex
+	url = https://github.com/AIM-ENE/teex
+[submodule "courses/soex"]
+	path = courses/soex
+	url = https://github.com/AIM-ENE/soex
+[submodule "courses/pexe"]
+	path = courses/pexe
+	url = https://github.com/AIM-ENE/pexe
