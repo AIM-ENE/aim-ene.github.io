@@ -21,6 +21,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+          # Required to read private submodule repos (doex/teex/soex/pexe).
+          token: ${{ secrets.SUBMODULES_READ_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 20
