@@ -1,0 +1,44 @@
+:root {
+  --ifm-color-primary: #2a4b7c;
+  --ifm-color-primary-dark: #24406a;
+  --ifm-color-primary-darker: #20385d;
+  --ifm-color-primary-light: #355d94;
+  --ifm-color-primary-lighter: #3b66a1;
+}
+
+.hero-image {
+  display: block;
+  max-width: 100%;
+  width: min(520px, 100%);
+  height: auto;
+  margin: 12px 0 20px;
+  border-radius: 10px;
+}
+
+details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.details-right {
+  max-width: 520px;
+  margin-left: auto;
+}
+
+.navbar-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.navbar-home-link::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background-image: url("/img/home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
