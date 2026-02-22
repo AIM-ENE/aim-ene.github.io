@@ -1,0 +1,25 @@
+{
+  "name": "aim-ene.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "lint:md": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\" --ignore \"legacy/**\"",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
+    "@easyops-cn/docusaurus-search-local": "^0.52.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.44.0"
+  }
+}

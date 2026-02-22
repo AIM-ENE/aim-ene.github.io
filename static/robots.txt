@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /$
+Allow: /doex/
+Allow: /teex/
+Allow: /soex/
+Allow: /pexe/
+
+Sitemap: https://aim-ene.github.io/sitemap.xml
+Sitemap: https://aim-ene.github.io/doex/sitemap.xml
+Sitemap: https://aim-ene.github.io/teex/sitemap.xml
+Sitemap: https://aim-ene.github.io/soex/sitemap.xml
+Sitemap: https://aim-ene.github.io/pexe/sitemap.xml
