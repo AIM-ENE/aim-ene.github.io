@@ -1,0 +1,4 @@
+MD013: false # Max line length uit: onnodig bij editor wrapping
+MD026: false # Trailing punctuation in headings uit
+MD033: false # Inline HTML uit: nodig voor bijvoorbeeld target="_blank"
+MD051: false # Link fragments/anchors uit: voorkomt broken anchor warnings
