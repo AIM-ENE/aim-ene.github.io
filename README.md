@@ -60,12 +60,14 @@ git commit -m "Update doex submodule"
 ## Gewenste Architectuur
 
 Doel:
+
 - Doorzoekbaarheid vanaf de root site over alle course-materialen.
 - Course teams blijven volledig autonoom in hun eigen repo.
 - Geen monoliet: submodules zijn alleen voor indexering en synchronisatie.
 - Eventual consistency is acceptabel: root search kan tijdelijk achterlopen op de bronrepos.
 
 Belangrijk:
+
 - Deze repo hoort niet de primaire deploybron van alle 4 course sites te zijn.
 - De course sites blijven deployen vanuit hun eigen repositories.
 - Zie ADR voor keuze, alternatieven en open punten: `docs/adr/ADR-0001-root-zoeken-over-course-websites.md`.
@@ -74,18 +76,22 @@ Belangrijk:
 - Zie ADR voor keuze van Docusaurus en deploy-aanpak: `docs/adr/ADR-0004-docusaurus-als-static-site-generator.md`.
 
 Crawler/robots aandachtspunt:
+
 - Op de root staan links naar Teams en GitHub Classroom.
 - Als die niet geïndexeerd mogen worden, moet `static/robots.txt` dit expliciet blokkeren (of de links moeten naar niet-indexeerbare context verplaatst worden).
 
 ## Markdown linting
 
-We gebruiken `markdownlint-cli` voor markdown checks:
+We gebruiken `Quickmark` voor markdown checks:
 
 ```bash
 yarn lint:md
 ```
 
-Voor VS Code is in de workspace de extensie `DavidAnson.vscode-markdownlint` aanbevolen (`.vscode/extensions.json`).
+Voor zowel VS Code als IntelliJ IDEA wordt de Quickmark (Linter) plugin van Evgeny Kropotin aanbevolen:
+
+- VS Code: [ekropotin.vscode-quickmark](https://marketplace.visualstudio.com/items?itemName=ekropotin.vscode-quickmark) (`.vscode/extensions.json`)
+- IntelliJ IDEA: [com.ekropotin.quickmark](https://plugins.jetbrains.com/plugin/28305-quickmark) (`.idea/externalDependencies.xml`)
 
 ## Shared components package (draft)
 
