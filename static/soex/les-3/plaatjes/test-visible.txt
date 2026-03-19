@@ -1,0 +1,1 @@
+Dit is een testbestand om te controleren of static assets zichtbaar zijn via Docusaurus. Als je deze tekst ziet in de browser, werkt het static pad.
