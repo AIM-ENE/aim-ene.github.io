@@ -1,0 +1,5 @@
+[linters.severity]
+line-length = "off"
+no-inline-html = "off"
+no-bare-urls = "off"
+

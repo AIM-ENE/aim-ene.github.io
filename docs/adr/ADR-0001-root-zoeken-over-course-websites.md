@@ -11,7 +11,7 @@ Deze repository (`aim-ene.github.io`) is bedoeld als root/startpagina voor ENE. 
 Aanleiding voor een aparte root-repo:
 
 - Studenten en docenten kunnen vanaf course-URL's voorspelbaar terugnavigeren door URL-segmenten weg te halen ("URL hacken").
-- Korte onderbouwing uit usability-perspectief: "By deleting the final segment of the URL, a user can move up to the parent page."
+- Korte onderbouwing uit usability-perspectief: "By deleting the final segment of the URL, a user can move up to the parent page.".
 - Deze aanpak past bij het idee dat URL-structuur ook bruikbare navigatie biedt (Gurkha Technology, z.d.).
 
 Er is een wens om vanaf de root te kunnen zoeken over al het course-materiaal, zonder de course-repositories om te bouwen naar een monorepo.

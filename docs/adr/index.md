@@ -3,7 +3,7 @@ title: ADR
 slug: /adr
 ---
 
-Deze sectie bevat **Architectural Decision Records (ADR)** voor het Docusaurus root-project `aim-ene.github.io`.
+Deze sectie bevat **Architectural Decision Records (ADR's)** voor het Docusaurus root-project `aim-ene.github.io`.
 
 ## Overzicht
 
@@ -14,7 +14,7 @@ Deze sectie bevat **Architectural Decision Records (ADR)** voor het Docusaurus r
 
 De ADR's geven extra achtergrond voor docenten en ontwikkelaars van het lesmateriaal over technische keuzes rondom Docusaurus voor deze websites. Voor studenten kunnen de ADR's ook als voorbeeld dienen. In SOEX (week 1 les 4) behandelen we ADR's expliciet, en daarna maak en gebruik je ze zelf en ook in het eind projectwerk (PeXe). Dit project is **alleen front-end** en wijkt daarmee af van de SoEx en PeXe projecten, die vaker full stack zijn. ADR's zijn een laagdrempelige opstap naar beter ontwerpdenken in teams: "a gateway to better design thinking" (Keeling & Runde, z.d.).
 
-Alle ADR's in deze sectie volgen primair het ADR template van Michael Nygard (2011). In deze repo gebruiken we daarnaast expliciet een sectie `Options`, zodat alternatieven snel scanbaar blijven.
+Alle ADR's in deze sectie volgen primair het ADR template van Michael Nygard (2011). In deze repo gebruiken we daarnaast expliciet een sectie `Options`, zodat alternatieven snel scanbaar blijven. We voegen in deze repository óók altijd een sectie `Bronnen` toe onderaan elke ADR. Gezien de eis van bronvermelding (APA) op de HAN en het nut van goede materialen zoeken en gebruiken, en expliciet noemen als verantwoording is dit een logische uitbreiding op het Nygard-template.
 
 We laten na ook een ADR op te nemen over de keuze voor dit ADR template zelf; maar mits je het consistent doet kun je zelf anderen gebruiken. Als voorbeeld van en alternatief/optie kun je ook een Y-statement gebruiken, zoals beschreven door Doc Soc (z.d.), bijvoorbeeld:
 
