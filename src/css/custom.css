@@ -42,3 +42,52 @@ details > summary {
   background-position: center;
   background-size: contain;
 }
+
+.navbar-version-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
+
+.ene-map-block {
+  position: relative;
+  float: right;
+  width: 460px;
+  margin: 0 0 16px 16px;
+}
+
+.ene-map-image {
+  display: block;
+  width: 460px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ene-versions-overlay {
+  position: static;
+  margin-top: 8px;
+  background: rgba(19, 29, 46, 0.86);
+  color: #f1f5ff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.68rem;
+  line-height: 1.25;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.ene-versions-title {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.ene-version-line {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .ene-map-block {
+    float: none;
+    margin: 0 auto 16px;
+  }
+}

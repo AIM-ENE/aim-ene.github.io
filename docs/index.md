@@ -3,7 +3,13 @@ title: "S2: Exploration 'N' Elaboration"
 sidebar_position: 1
 ---
 
-<img src="/img/ene-logo-variant.png" alt="ENE logo met klikbare vlakken voor DOEX, TEEX, SOEX en PEXE" align="right" width="460" useMap="#ene-courses-map" />
+import CourseVersionsOverlay from '@site/src/components/CourseVersionsOverlay';
+
+<div className="ene-map-block">
+  <img className="ene-map-image" src="/img/ene-logo-variant.png" alt="ENE logo met klikbare vlakken voor DOEX, TEEX, SOEX en PEXE" width="460" useMap="#ene-courses-map" />
+  <CourseVersionsOverlay />
+</div>
+
 <map name="ene-courses-map">
   <area shape="rect" coords="0,0,230,230" href="/doex/lessenindeling" alt="DOEX" title="DOEX - Domain Exploration" aria-label="DOEX - Domain Exploration" />
   <area shape="rect" coords="230,0,460,230" href="/teex/docs/intro/" alt="TEEX" title="TEEX - Technology Exploration" aria-label="TEEX - Technology Exploration" />

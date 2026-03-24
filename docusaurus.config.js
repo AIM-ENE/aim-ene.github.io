@@ -1,6 +1,40 @@
 // @ts-check
 
 const path = require('path');
+const {execSync} = require('child_process');
+const {version: rootVersion} = require('./package.json');
+
+function readSubmoduleVersion(courseId) {
+  const coursePath = path.join(__dirname, 'courses', courseId);
+  const packagePath = path.join(coursePath, 'studenten', 'package.json');
+
+  let semver = 'unknown';
+  let commit = 'unknown';
+
+  try {
+    semver = require(packagePath).version;
+  } catch {
+    // Keep fallback when package.json is unavailable.
+  }
+
+  try {
+    commit = execSync(`git -C "${coursePath}" rev-parse --short=8 HEAD`, {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+  } catch {
+    // Keep fallback when git metadata is unavailable.
+  }
+
+  return {
+    id: courseId.toUpperCase(),
+    courseId,
+    semver,
+    commit,
+  };
+}
+
+const submoduleVersions = ['doex', 'teex', 'soex', 'pexe'].map(readSubmoduleVersion);
 
 const config = {
   title: 'Software Engineering S2: Exploration and Elaboration',
@@ -26,6 +60,10 @@ const config = {
       onBrokenMarkdownLinks: 'warn',
       onBrokenMarkdownImages: 'warn',
     },
+  },
+  customFields: {
+    rootVersion,
+    submoduleVersions,
   },
   presets: [
     [
@@ -120,6 +158,11 @@ const config = {
           to: "/",
           className: "navbar-home-link",
           position: "left"
+        },
+        {
+          type: 'html',
+          value: `<span class="navbar-version-badge" aria-label="Root-versie">root v${rootVersion}</span>`,
+          position: 'right',
         },
         {
           type: "search",

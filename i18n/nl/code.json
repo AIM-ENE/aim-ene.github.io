@@ -1,0 +1,14 @@
+{
+  "theme.SearchBar.label": {
+    "message": "Zoek",
+    "description": "Placeholder and ARIA label for the navbar search input"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Geen resultaten",
+    "description": "Shown when no search results are found"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Toon alle resultaten",
+    "description": "CTA to show all matching search results"
+  }
+}

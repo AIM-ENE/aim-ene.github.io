@@ -1,11 +1,11 @@
 {
   "name": "aim-ene.github.io",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "packageManager": "yarn@1.22.22",
   "scripts": {
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "node scripts/guard-root-build.cjs",
     "lint:md": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\" --ignore \"legacy/**\"",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

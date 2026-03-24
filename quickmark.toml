@@ -1,5 +1,10 @@
 [linters.severity]
+
 line-length = "off"
 no-inline-html = "off"
 no-bare-urls = "off"
 
+# Quickmark linterregels voor kopjes en lijsten
+# Zie AGENTS.md voor uitleg en motivatie. Deze regels staan bewust NIET op 'off'.
+blanks-around-headings = true
+blanks-around-lists = true
