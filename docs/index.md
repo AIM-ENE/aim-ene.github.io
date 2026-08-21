@@ -30,6 +30,30 @@ Klik via het plaatje of hieronder door naar de courses (websites met lesmateriaa
 
 ## Uitvoering per periode
 
+### September 2026
+
+<details>
+  <summary>Klap open</summary>
+
+#### Vragen of problemen? Gebruik MS Teams.
+
+Heb je vragen en of problemen? Het makkelijkst is natuurlijk direct in de klas te vragen bij 1 van de 5 lessen. Maar buiten de lessen is het speciale ENE Team in Microsoft Teams het snelst:
+
+- [Teams](https://teams.microsoft.com/l/team/19%3AONfle_vlHU7HZoQEqW2gETgKQPqpYgPnz2nG_5oV5ro1%40thread.tacv2/conversations?groupId=90cd2f11-636c-459f-8f18-f2fbbfadb901&tenantId=5d73e7b7-b3e1-4d00-b303-056140b2a3b4)
+
+#### GitHub Links
+Hier is de directe link naar de GitHub organisatie van deze uitvoering van dit vak:
+
+- [https://github.com/AIM-ENE-sep26](https://github.com/AIM-ENE-sep26)
+
+Nadat je toegang hebt gekregen kan je hier template repositories clonen om de week- en lesopdrachten in te maken.
+
+![clone template repository.png](/img/clonen_repo_template.png)
+
+Neem contact op met één van je docenten mocht je geen toegang hebben, maar wel zijn ingeschreven.
+
+</details>
+
 ### Februari 2026
 
 <details>
