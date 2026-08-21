@@ -46,7 +46,7 @@ Hier is de directe link naar de GitHub organisatie van deze uitvoering van dit v
 
 - [https://github.com/AIM-ENE-sep26](https://github.com/AIM-ENE-sep26)
 
-Nadat je toegang hebt gekregen kan je hier template repositories clonen om de week- en lesopdrachten in te maken.
+Nadat je toegang hebt gekregen kan je hier template repositories gebruiken om een repository te genereren waarin de week- en lesopdrachten gemaakt kunnen worden.
 
 ![clone template repository.png](/img/clonen_repo_template.png)
 
